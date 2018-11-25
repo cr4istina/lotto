@@ -7,6 +7,7 @@ public class Input {
 
     static int attempts() {
         System.out.println("Please enter 5 numbers from 1 to 35: ");
+
         Scanner theNumbers = new Scanner(System.in);
         int number1 = theNumbers.nextInt();
         int number2 = theNumbers.nextInt();
@@ -17,57 +18,58 @@ public class Input {
         Random numbers = new Random();
 
         int x = 0;
-        int a = 55;
-        while (number1 != a || number2 != a || number3 != a || number4 != a || number5 != a) {
+        int a = 36;
+        int b = 36;
+        int c  = 36;
+        int d = 36;
+        int e = 36;
+
+        while (number1 != a) {
+            a = numbers.nextInt(35) + 1;
             if (number1 == a) {
-                System.out.println("You' ve got 1 number: " + number1);
+                System.out.println("You've got 1st number: " + a);
                 break;
-            } else if (number1 < a){
-                a = numbers.nextInt(35) + 1;
-            } else {
-                a = numbers.nextInt(35) + 1;
             }
-
-            if (number2 == a) {
-                System.out.println("You' ve got the 2nd number: " + number2);
-                break;
-            } else if (number2 < a){
-                a = numbers.nextInt(49) + 1;
-            } else {
-                a = numbers.nextInt(49) + 1;
-            }
-
-            if (number3 == a) {
-                System.out.println("You' ve got the 3rd number: " + number3);
-                break;
-            } else if (number3 < a){
-                a = numbers.nextInt(49) + 1;
-            } else {
-                a = numbers.nextInt(49) + 1;
-            }
-
-            if (number4 == a) {
-                System.out.println("You' ve got the 4th number: " + number4);
-                break;
-            } else if (number4 < a){
-                a = numbers.nextInt(49) + 1;
-            } else {
-                a = numbers.nextInt(49) + 1;
-            }
-
-            if (number5 == a) {
-                System.out.println("You' ve got the 5th number: " + number5);
-                break;
-            } else if (number5 < a){
-                a = numbers.nextInt(49) + 1;
-            } else {
-                a = numbers.nextInt(49) + 1;
-            }
-
             x++;
         }
-        System.out.println("For the chosen numbers you'd need like ... ");
 
+        while (number2 != b) {
+            b = numbers.nextInt(35) + 1;
+            if (number2 == b) {
+                System.out.println("You've got the 2nd number: " + b);
+                break;
+            }
+            x++;
+        }
+
+        while (number3 != c) {
+            c = numbers.nextInt(35) + 1;
+            if (number3 == c) {
+                System.out.println("You've got the 3rd number: " + c);
+                break;
+            }
+            x++;
+        }
+
+        while (number4 != d) {
+            d = numbers.nextInt(35) + 1;
+            if (number4 == d) {
+                System.out.println("You've got the 4th number: " + d);
+                break;
+            }
+            x++;
+        }
+
+        while (number5 != e) {
+            e = numbers.nextInt(35) + 1;
+            if (number5 == e) {
+                System.out.println("You've got the 5th number: " + e);
+                break;
+            }
+            x++;
+        }
+
+        System.out.println("The numbers of attempt to match your numbers is: ");
         return x;
     }
 }

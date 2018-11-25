@@ -5,6 +5,5 @@ public class Main {
 
         System.out.println("Let's play a lotto game  :)");
         Output.printAttempts();
-        System.out.print(" attempts.  :) ");
     }
 }
